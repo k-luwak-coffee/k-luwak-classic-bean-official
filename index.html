@@ -22,10 +22,16 @@
             text-align: center;
             padding: 20px 0;
             background-color: #f8f8f8;
+            /* 헤더 자체의 높이를 조절하여 불필요한 공간을 줄일 수 있습니다 */
+            height: auto; /* 이미지 크기에 맞춰 자동으로 조절 */
+            overflow: hidden; /* 혹시 모를 오버플로우 방지 */
         }
         header img {
             max-width: 180px; /* 로고 이미지 크기 조정 */
             height: auto;
+            /* 현재 로고가 긴 이미지 파일의 일부이므로, CSS로 로고 부분만 보이게 하려면 복잡해집니다.
+               따라서, 긴 이미지를 통째로 메인에만 넣고 헤더는 비워두거나 텍스트로 대체하는 것이 가장 쉽습니다. */
+            display: none; /* 헤더의 이미지는 숨김 (아래 메인 이미지에 로고가 포함되어 있으므로) */
         }
         .full-width-image { /* 전체 이미지 스타일 */
             width: 100%;
@@ -55,49 +61,6 @@
         }
         .text-block p {
             font-size: 1.1em;
-            color: #555;
-        }
-        .review-section {
-            background-color: #fafafa;
-            padding: 40px 20px;
-            margin-top: 40px;
-        }
-        .review-item {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .review-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        .review-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .review-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 10px;
-            overflow: hidden;
-        }
-        .review-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .review-info strong {
-            display: block;
-            font-size: 1.1em;
-        }
-        .review-rating {
-            color: #fbc02d;
-        }
-        .review-text {
-            font-size: 0.95em;
             color: #555;
         }
         .product-spec-section {
@@ -151,11 +114,10 @@
 </head>
 <body>
     <header>
-        <img src="케이루왁클래식원두.jpg" alt="K-LUWAK COFFEE 로고" class="full-width-image">
-    </header>
+        </header>
 
     <main>
-        <section>
+        <section class="image-section" style="margin-top: 0;">
             <img src="케이루왁클래식원두.jpg" alt="케이루왁 클래식 원두 상세 정보" class="full-width-image">
         </section>
 
