@@ -46,35 +46,17 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .product-item {
-            flex: 1 1 calc(33% - 40px); /* 3개씩 나열 (반응형 고려) */
-            max-width: 250px;
-            text-align: center;
-            border: 1px solid #eee;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .product-item img {
-            max-width: 100%;
-            height: auto;
+        .text-block h2 {
+            font-size: 1.8em;
+            line-height: 1.4;
+            color: #444;
             margin-bottom: 10px;
         }
-        .product-item h4 {
-            margin: 10px 0;
+        .text-block p {
             font-size: 1.1em;
-            color: #444;
+            color: #555;
         }
-        .product-item p {
-            font-size: 0.9em;
-            color: #666;
-        }
+        /* 삭제된 product-grid 관련 스타일은 주석 처리 또는 제거했습니다. */
         .full-width-img {
             width: 100%;
             height: auto;
@@ -178,11 +160,11 @@
         }
         .certification-grid {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* 이미지들이 삭제되어 남은 텍스트 중앙 정렬 */
             gap: 30px;
             margin-top: 20px;
         }
-        .certification-item img {
+        .certification-item img { /* 이미지가 삭제되었으므로 이 스타일은 더 이상 적용되지 않음 */
             max-width: 100px;
             height: auto;
         }
@@ -194,8 +176,6 @@
             max-width: 100%;
             height: auto;
         }
-        /* 이미지 내의 텍스트가 아니라 실제 텍스트로 대체했습니다. */
-        /* 이미지 경로가 없는 이미지들은 임시 대체 이미지를 사용했습니다. */
     </style>
 </head>
 <body>
@@ -210,7 +190,8 @@
 
         <section class="container intro-section">
             <div class="text-block">
-                <h2>K-LUWAK COFFEE는 유산균(Lactic Acid Bacteria)을 활용한 특별한 커피 발효 기술을 선보입니다. 이 혁신적인 공법은 커피 생두가 가진 본연의 풍미를 한 차원 더 끌어올려, 전에 없던 특별한 커피 경험을 선사합니다.</h2>
+                <h2>K-LUWAK COFFEE: 유산균 발효 기술로 선사하는 특별한 커피 경험</h2>
+                <p>K-LUWAK COFFEE는 유산균(Lactic Acid Bacteria) 발효 기술을 통해 커피 생두 본연의 풍미를 한 차원 높였습니다. 이 혁신적인 공법으로 전에 없던 깊고 특별한 커피 경험을 선사합니다.</p>
             </div>
         </section>
 
@@ -218,28 +199,6 @@
             <h3 class="section-title">K-LUWAK만의 특별한 발효 기술</h3>
             <img src="케이루왁클래식원두.jpg" alt="발효 공정 이미지" class="full-width-img" style="object-position: 0% 15%; object-fit: cover; max-height: 300px; overflow: hidden;">
             <p style="text-align: center;">K-LUWAK 커피의 발효 과정은 생두의 잠재된 풍미를 극대화하고, 산미와 바디감을 섬세하게 조절하여 부드럽고 깊은 맛을 완성합니다.</p>
-        </section>
-
-        <section class="container product-overview-section">
-            <img src="케이루왁클래식원두.jpg" alt="커피잔과 원두" class="full-width-img" style="object-position: 0% 30%; object-fit: cover; max-height: 300px; overflow: hidden;">
-            <h3 class="section-title">케이루왁의 다양한 커피 라인업</h3>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="케이루왁클래식원두.jpg" alt="클래식 원두 제품" style="object-position: 0% 35%; object-fit: cover; height: 150px;">
-                    <h4>클래식 원두</h4>
-                    <p>깊고 진한 풍미, 부드러운 목넘김...</p>
-                </div>
-                <div class="product-item">
-                    <img src="케이루왁클래식원두.jpg" alt="블렌딩 원두 제품" style="object-position: 0% 40%; object-fit: cover; height: 150px;">
-                    <h4>블렌딩 원두</h4>
-                    <p>균형 잡힌 맛과 향, 은은한 여운...</p>
-                </div>
-                <div class="product-item">
-                    <img src="케이루왁클래식원두.jpg" alt="드립백 커피 제품" style="object-position: 0% 45%; object-fit: cover; height: 150px;">
-                    <h4>드립백 커피</h4>
-                    <p>간편하게 즐기는 프리미엄 커피...</p>
-                </div>
-            </div>
         </section>
 
         <section class="container review-section">
@@ -268,6 +227,19 @@
                 </div>
                 <p class="review-text">"원래 신맛 나는 커피는 별로 안 좋아했는데, 케이루왁 발효 커피는 산미가 부드럽게 살아있어서 너무 좋아요. 향도 좋고 정말 만족합니다."</p>
             </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <img src="케이루왁클래식원두.jpg" alt="추가 리뷰 사용자 아바타" style="object-position: 0% 60%; object-fit: cover;">
+                    </div>
+                    <div class="review-info">
+                        <strong>새로운 고객님</strong>
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+                </div>
+                <p class="review-text">"K-루왁커피 정말 맛있어요! 품질도 좋고 향도 뛰어나서 계속 구매할 것 같아요."</p>
+                <img src="케이루왁클래식원두.jpg" alt="추가 리뷰 이미지" style="max-width: 100%; height: auto; margin-top: 10px; object-position: 0% 65%; object-fit: cover; max-height: 200px; overflow: hidden;">
+            </div>
         </section>
 
         <section class="container product-spec-section">
@@ -290,7 +262,7 @@
                     </tr>
                     <tr>
                         <th>내용량</th>
-                        <td>200g (이미지 상의 용량 확인 후 수정)</td>
+                        <td>200g /500g /1kg</td>
                     </tr>
                     <tr>
                         <th>보관 방법</th>
@@ -302,15 +274,15 @@
                     </tr>
                     <tr>
                         <th>제조원</th>
-                        <td>(주)케이루왁 (... 상세 정보 확인 후 수정)</td>
+                        <td>케이루왁커피</td>
                     </tr>
                     <tr>
                         <th>품목보고번호</th>
-                        <td>(이미지 상의 번호 확인 후 수정)</td>
+                        <td>92016007703119</td>
                     </tr>
                     <tr>
                         <th>고객상담실</th>
-                        <td>070-XXXX-XXXX (이미지 상의 번호 확인 후 수정)</td>
+                        <td>070-8802-8250</td>
                     </tr>
                 </tbody>
             </table>
@@ -336,24 +308,6 @@
             </div>
         </section>
 
-        <section class="certification-section">
-            <h3 class="section-title" style="color: #333;">신뢰할 수 있는 K-LUWAK COFFEE</h3>
-            <div class="certification-grid">
-                <div class="certification-item">
-                    <img src="케이루왁클래식원두.jpg" alt="USDA ORGANIC 인증" style="object-position: 0% 70%; object-fit: cover; height: 100px;">
-                    <p>USDA ORGANIC</p>
-                </div>
-                <div class="certification-item">
-                    <img src="케이루왁클래식원두.jpg" alt="KFDA HACCP 인증" style="object-position: 0% 75%; object-fit: cover; height: 100px;">
-                    <p>KFDA HACCP</p>
-                </div>
-                <div class="certification-item">
-                    <img src="케이루왁클래식원두.jpg" alt="ISO 22000 인증" style="object-position: 0% 80%; object-fit: cover; height: 100px;">
-                    <p>ISO 22000</p>
-                </div>
-            </div>
-        </section>
-
         <section class="promo-section">
             <h3 class="section-title">K-LUWAK COFFEE와 함께하는 특별한 순간</h3>
             <img src="케이루왁클래식원두.jpg" alt="커피를 즐기는 사람들" class="full-width-img" style="object-position: 0% 90%; object-fit: cover; max-height: 400px; overflow: hidden;">
@@ -362,9 +316,9 @@
     </main>
 
     <footer>
-        <p>상호명: (주)케이루왁 | 대표: 홍길동 | 사업자등록번호: XXX-XX-XXXXX</p>
-        <p>주소: 서울시 강남구 테헤란로 XXX | 전화: 070-XXXX-XXXX | 팩스: 02-XXXX-XXXX</p>
-        <p>개인정보보호책임자: 김관리 | 이메일: info@k-luwak.com</p>
+        <p>상호명: 케이루왁커피 | 대표: 김주대 | 사업자등록번호: 852-03-00396</p>
+        <p>주소: 서울시 양천구 신정로 267 양천벤처타운 202호 | 전화: 070-8802-8250 | 팩스: 0505-270-8250</p>
+        <p>개인정보보호책임자: 김주대 | 이메일: joo3350@naver.com</p>
         <p>Copyright &copy; 2023 K-LUWAK COFFEE. All Rights Reserved.</p>
     </footer>
 
