@@ -27,10 +27,11 @@
             max-width: 180px; /* 로고 이미지 크기 조정 */
             height: auto;
         }
-        .main-visual-section img {
+        .section-image { /* 섹션별 이미지 스타일 */
             width: 100%;
             height: auto;
             display: block;
+            margin: 0; /* 이미지 간 여백 제거 */
         }
         .section-title {
             text-align: center;
@@ -56,13 +57,6 @@
             font-size: 1.1em;
             color: #555;
         }
-        /* 삭제된 product-grid 관련 스타일은 주석 처리 또는 제거했습니다. */
-        .full-width-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 30px 0;
-        }
         .review-section {
             background-color: #fafafa;
             padding: 40px 20px;
@@ -82,11 +76,11 @@
             align-items: center;
             margin-bottom: 10px;
         }
-        .review-avatar {
+        .review-avatar { /* 아바타 이미지가 별도 파일로 제공되지 않아 임시 처리 */
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #ddd; /* 사용자 프로필 이미지 없을 시 */
+            background-color: #ddd;
             margin-right: 10px;
             overflow: hidden;
         }
@@ -100,7 +94,7 @@
             font-size: 1.1em;
         }
         .review-rating {
-            color: #fbc02d; /* 별점 색상 */
+            color: #fbc02d;
         }
         .review-text {
             font-size: 0.95em;
@@ -146,46 +140,33 @@
         }
         .qa-question {
             font-weight: bold;
-            color: #4CAF50; /* 질문 색상 */
+            color: #4CAF50;
         }
         .qa-answer {
             margin-top: 5px;
             color: #666;
         }
-        .certification-section {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px 0;
-            background-color: #e6ffe6; /* 연한 녹색 배경 */
-        }
-        .certification-grid {
-            display: flex;
-            justify-content: center; /* 이미지들이 삭제되어 남은 텍스트 중앙 정렬 */
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .certification-item img { /* 이미지가 삭제되었으므로 이 스타일은 더 이상 적용되지 않음 */
-            max-width: 100px;
-            height: auto;
-        }
         .promo-section {
             margin-top: 50px;
             text-align: center;
         }
-        .promo-section img {
-            max-width: 100%;
-            height: auto;
+        .promo-section .full-width-img {
+            display: none;
+        }
+        /* 각 이미지를 담을 섹션 스타일 */
+        .image-section {
+            margin-bottom: 0; /* 이미지 간 불필요한 마진 제거 */
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="케이루왁클래식원두.jpg" alt="K-LUWAK COFFEE 로고" style="max-width: 180px;">
+        <img src="케이루왁클래식원두 1.jpg" alt="K-LUWAK COFFEE 로고" class="section-image">
     </header>
 
     <main>
-        <section class="main-visual-section">
-            <img src="케이루왁클래식원두.jpg" alt="케이루왁 클래식 원두 메인 이미지" class="main-visual" style="object-position: top; object-fit: cover; max-height: 400px; overflow: hidden;">
+        <section class="image-section">
+            <img src="케이루왁클래식원두 2.jpg" alt="케이루왁 클래식 원두 메인 이미지" class="section-image">
         </section>
 
         <section class="container intro-section">
@@ -195,124 +176,46 @@
             </div>
         </section>
 
-        <section class="container fermentation-tech-section">
-            <h3 class="section-title">K-LUWAK만의 특별한 발효 기술</h3>
-            <img src="케이루왁클래식원두.jpg" alt="발효 공정 이미지" class="full-width-img" style="object-position: 0% 15%; object-fit: cover; max-height: 300px; overflow: hidden;">
-            <p style="text-align: center;">K-LUWAK 커피의 발효 과정은 생두의 잠재된 풍미를 극대화하고, 산미와 바디감을 섬세하게 조절하여 부드럽고 깊은 맛을 완성합니다.</p>
+        <section class="image-section">
+            <img src="케이루왁클래식원두 3.jpg" alt="발효 공정 이미지" class="section-image">
         </section>
 
-        <section class="container review-section">
-            <h3 class="section-title">REAL REVIEW</h3>
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="review-avatar">
-                        <img src="케이루왁클래식원두.jpg" alt="사용자1 아바타" style="object-position: 0% 50%; object-fit: cover;">
-                    </div>
-                    <div class="review-info">
-                        <strong>김*현 고객님</strong>
-                        <span class="review-rating">★★★★★</span>
-                    </div>
-                </div>
-                <p class="review-text">"커피 맛이 정말 깊고 부드러워서 매일 아침 기대됩니다. 발효 커피라 그런지 속도 편안하고 좋습니다. 벌써 몇 번째 재구매인지 모르겠어요!"</p>
-            </div>
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="review-avatar">
-                        <img src="케이루왁클래식원두.jpg" alt="사용자2 아바타" style="object-position: 0% 55%; object-fit: cover;">
-                    </div>
-                    <div class="review-info">
-                        <strong>박*수 고객님</strong>
-                        <span class="review-rating">★★★★★</span>
-                    </div>
-                </div>
-                <p class="review-text">"원래 신맛 나는 커피는 별로 안 좋아했는데, 케이루왁 발효 커피는 산미가 부드럽게 살아있어서 너무 좋아요. 향도 좋고 정말 만족합니다."</p>
-            </div>
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="review-avatar">
-                        <img src="케이루왁클래식원두.jpg" alt="추가 리뷰 사용자 아바타" style="object-position: 0% 60%; object-fit: cover;">
-                    </div>
-                    <div class="review-info">
-                        <strong>새로운 고객님</strong>
-                        <span class="review-rating">★★★★★</span>
-                    </div>
-                </div>
-                <p class="review-text">"K-루왁커피 정말 맛있어요! 품질도 좋고 향도 뛰어나서 계속 구매할 것 같아요."</p>
-                <img src="케이루왁클래식원두.jpg" alt="추가 리뷰 이미지" style="max-width: 100%; height: auto; margin-top: 10px; object-position: 0% 65%; object-fit: cover; max-height: 200px; overflow: hidden;">
-            </div>
+        <section class="image-section">
+            <img src="케이루왁클래식원두 4.jpg" alt="김*현 고객님 리뷰" class="section-image">
         </section>
 
-        <section class="container product-spec-section">
-            <h3 class="section-title">상품 상세 정보</h3>
-            <table class="spec-table">
-                <thead>
-                    <tr>
-                        <th>제품명</th>
-                        <td>케이루왁 클래식 원두</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>식품의 유형</th>
-                        <td>커피 (볶은 커피)</td>
-                    </tr>
-                    <tr>
-                        <th>원재료명</th>
-                        <td>커피 원두 100% (원산지: 브라질 외...)</td>
-                    </tr>
-                    <tr>
-                        <th>내용량</th>
-                        <td>200g /500g /1kg</td>
-                    </tr>
-                    <tr>
-                        <th>보관 방법</th>
-                        <td>직사광선을 피하고 서늘한 곳에 보관</td>
-                    </tr>
-                    <tr>
-                        <th>유통기한</th>
-                        <td>별도 표기일까지 (제조일로부터 12개월)</td>
-                    </tr>
-                    <tr>
-                        <th>제조원</th>
-                        <td>케이루왁커피</td>
-                    </tr>
-                    <tr>
-                        <th>품목보고번호</th>
-                        <td>92016007703119</td>
-                    </tr>
-                    <tr>
-                        <th>고객상담실</th>
-                        <td>070-8802-8250</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3 class="section-title" style="margin-top: 50px;">케이루왁 커피의 특별함</h3>
-            <ul style="list-style-type: disc; padding-left: 20px;">
-                <li>**산미와 쓴맛의 조화:** 발효를 통해 산미는 부드러워지고 쓴맛은 덜어내어 누구에게나 편안한 맛을 선사합니다.</li>
-                <li>**깊고 풍부한 아로마:** 기존 커피에서는 경험하기 힘든 독특하고 깊은 향을 느낄 수 있습니다.</li>
-                <li>**부드러운 목넘김과 긴 여운:** 균형 잡힌 바디감으로 목넘김이 편안하며, 입안 가득 긴 여운이 남습니다.</li>
-                <li>**안정적인 품질:** 엄격한 품질 관리 시스템을 통해 언제나 최상의 맛을 제공합니다.</li>
-            </ul>
+        <section class="image-section">
+            <img src="케이루왁클래식원두 5.jpg" alt="박*수 고객님 리뷰" class="section-image">
         </section>
 
-        <section class="container qa-section">
-            <h3 class="section-title">자주 묻는 질문</h3>
-            <div class="qa-item">
-                <p class="qa-question">Q. 보관은 어떻게 하나요?</p>
-                <p class="qa-answer">A. 직사광선을 피하고 서늘하며 건조한 곳에 보관해주세요. 개봉 후에는 밀폐용기에 담아 냉장 보관하시면 더욱 신선하게 즐기실 수 있습니다.</p>
-            </div>
-            <div class="qa-item">
-                <p class="qa-question">Q. 유통기한은 어떻게 되나요?</p>
-                <p class="qa-answer">A. 제조일로부터 12개월이며, 제품 포장에 별도 표기되어 있습니다. 가급적 빠른 시일 내에 소비하시는 것이 좋습니다.</p>
-            </div>
+        <section class="image-section">
+            <img src="케이루왁클래식원두 6.jpg" alt="새로운 고객 리뷰" class="section-image">
         </section>
 
-        <section class="promo-section">
-            <h3 class="section-title">K-LUWAK COFFEE와 함께하는 특별한 순간</h3>
-            <img src="케이루왁클래식원두.jpg" alt="커피를 즐기는 사람들" class="full-width-img" style="object-position: 0% 90%; object-fit: cover; max-height: 400px; overflow: hidden;">
-            <p style="text-align: center; margin-top: 20px;">지금 바로 케이루왁의 프리미엄 발효 커피를 경험해보세요.</p>
+        <section class="image-section">
+            <img src="케이루왁클래식원두 7.jpg" alt="추가 리뷰 이미지" class="section-image">
         </section>
+
+        <section class="image-section">
+            <img src="케이루왁클래식원두 8.jpg" alt="커피를 즐기는 사람들" class="section-image">
+        </section>
+
+        <section class="image-section">
+            <img src="케이루왁클래식원두 9.jpg" alt="상품 상세 정보 1" class="section-image">
+        </section>
+
+        <section class="image-section">
+            <img src="케이루왁클래식원두 10.jpg" alt="상품 상세 정보 2" class="section-image">
+        </section>
+
+        <section class="image-section">
+            <img src="케이루왁클래식원두 11.jpg" alt="인증 마크 섹션" class="section-image">
+        </section>
+
+        <section class="image-section">
+            <img src="케이루왁클래식원두 12.jpg" alt="푸터 이미지" class="section-image">
+        </section>
+
     </main>
 
     <footer>
